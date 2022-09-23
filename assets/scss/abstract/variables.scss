@@ -1,0 +1,30 @@
+$color_white: #FFFFFF;
+$color_light_grey: #eeeeee;
+$color_grey: #ccc;
+$color_dark: #707070;
+$color_black: #222322;
+
+$color_success: #28a745;
+$color_info: #17a2b8;
+$color_warning: #ffc107;
+$color_danger: #dc3545;
+
+$color_green: #8bc34a;
+$color_blue: #42a5f5;
+$color_primary: $color_blue;
+
+/**
+ * Fonts weights
+ */
+$font_thin: 100;
+$font_extra_light: 200;
+$font_light: 300;
+$font_regular: 400;
+$font_medium: 500;
+$font_semi_bold: 600;
+$font_bold: 700;
+$font_extra_bold: 800;
+$font_black: 900;
+
+$box_shadow: 0 0.1rem 0.3rem rgba($color_black, 0.2);
+$border_radius: 0.5rem;

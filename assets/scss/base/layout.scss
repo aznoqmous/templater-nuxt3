@@ -1,0 +1,85 @@
+.container {
+  @include container;
+}
+
+header {
+  padding: 1rem 0;
+  color: $color_primary;
+  a {
+    color: inherit;
+  }
+}
+
+form {
+  @include transition;
+  position: relative;
+  &:after {
+    content: "Saved";
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    text-align: right;
+    opacity: 0;
+  }
+  &.loading {
+    &:after {
+      opacity: 1;
+      content: "Saving..."
+    }
+  }
+  &.typing {
+    &:after {
+      opacity: 1;
+      content: "🖉";
+      transform: scale(2) translate(-25%, 0);
+    }
+  }
+  &.saved {
+    &:after {
+      opacity: 1;
+      content: "Saved";
+      animation: saved 5s forwards;
+    }
+  }
+}
+
+.form-inputs {
+  @include column;
+}
+
+.form-input {
+  @include inline-column;
+  width: 100%;
+  border-radius: $border_radius;
+  box-shadow: $box_shadow;
+  margin: 1rem 0;
+  position: relative;
+
+  label {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: $color_white;
+    transform: translate(0.6rem, -50%);
+    pointer-events: none;
+    font-weight: $font_semi_bold;
+  }
+  input[type="text"], textarea {
+    padding: 0.6rem;
+    padding-top: 1rem;
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    resize: vertical;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+textarea {
+  min-height: 20rem;
+}

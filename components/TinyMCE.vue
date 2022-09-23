@@ -6,6 +6,7 @@
             :id="name"
             model-events="change keyup blur focus paste"
             v-model="value"
+            :initial-value="value"
             @blur="update($event, value)"
             :init="{
                height: 500,

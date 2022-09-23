@@ -1,4 +1,8 @@
 <template>
-    <Header/>
-    <NuxtPage/>
+    <header class="container">
+      <Header/>
+    </header>
+    <div class="container content">
+      <NuxtPage/>
+    </div>
 </template>

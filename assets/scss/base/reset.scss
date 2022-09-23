@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+[visibility="hidden"] {
+  display: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  outline: 1px solid $color_light_grey;
+  border-radius: 1rem;
+
+  td, th {
+    text-align: left;
+    padding: 0.5rem 1rem;
+
+    &.actions {
+      text-align: right;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        border-top: 1px solid $color_light_grey;
+      }
+    }
+  }
+
+  thead {
+    tr:first-of-type {
+      th {
+        &:first-of-type {
+          border-radius: 5px 0 0 0;
+        }
+
+        &:last-of-type {
+          border-radius: 0 0 5px 0;
+        }
+      }
+    }
+  }
+
+  tbody {
+
+  }
+}
+
+.button {
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  font-size: 1rem;
+  @include buttonColors($color_white, $color_primary);
+  box-shadow: $box_shadow;
+  &.error {
+    @include buttonColors($color_white, $color_danger);
+  }
+}
+
+.button + .button {
+  margin-left: 0.5rem;
+}
+
+legend {
+  font-style: italic;
+  color: $color_grey;
+}
